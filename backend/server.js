@@ -32,6 +32,15 @@ app.delete('/cards/:id', (req, res) => {
   res.json({ ok: true })
 })
 
+app.get('/cards/:id', (req, res) => {
+  const id = Number(req.params.id)
+  const card = cards.find(c => c.id === id)
+  if (!card) {
+    return res.status(404).json({ error: 'card nao encontrado' })
+  }
+  res.json(card)
+})
+
 app.listen(3001, () => {
   console.log('servidor rodando na porta 3001')
 })
