@@ -55,6 +55,8 @@ function App() {
         <button type="submit">Adicionar</button>
       </form>
 
+      <p className="total">Total: {cards.length} cards</p>
+
       <div className="cards">
         {cards.map(card => (
           <div key={card.id} className="card" onClick={() => flipCard(card.id)}>

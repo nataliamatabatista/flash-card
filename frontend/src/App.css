@@ -39,6 +39,12 @@ form button {
   font-size: 14px;
 }
 
+.total {
+  text-align: center;
+  color: #666;
+  margin-bottom: 15px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
