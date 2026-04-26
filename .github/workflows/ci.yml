@@ -15,7 +15,11 @@ jobs:
           node-version: 18
 
       - name: instalar dependencias do backend
-        run: npm install
+        run: npm ci
+        working-directory: backend
+
+      - name: rodar testes do backend
+        run: npm test
         working-directory: backend
 
   frontend:
